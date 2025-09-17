@@ -24,4 +24,12 @@ describe("Palindrome Tests", () => {
   it("should return true for palindrome with spaces and punctuation", () => {
     expect(isPalindrome("A man, a plan, a canal: Panama")).toBe(true);
   });
+
+  it("should return true for emojis", () => {
+    expect(isPalindrome("😏madam😏")).toBe(true);
+  });
+
+  it("should return false for odd no. emojis", () => {
+    expect(isPalindrome("😏madam")).toBe(false);
+  });
 });
