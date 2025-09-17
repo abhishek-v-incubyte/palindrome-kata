@@ -8,4 +8,8 @@ describe("Palindrome Tests", () => {
   it("should return true for single character", () => {
     expect(isPalindrome("a")).toBe(true);
   });
+
+  it("should return true for palindrome string", () => {
+    expect(isPalindrome("racecar")).toBe(true);
+  });
 });
