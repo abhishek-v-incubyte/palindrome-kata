@@ -26,10 +26,10 @@ describe("Palindrome Tests", () => {
   });
 
   it("should return true for emojis", () => {
-    expect(isPalindrome("😏madam😏")).toBe(true);
+    expect(isPalindrome("😏racecar😏")).toBe(true);
   });
 
   it("should return false for odd no. emojis", () => {
-    expect(isPalindrome("😏madam")).toBe(false);
+    expect(isPalindrome("😏racecar")).toBe(false);
   });
 });
