@@ -23,6 +23,10 @@ class GeneralPalindromeRule implements PalindromeRule {
   }
 }
 
+const removeNonAlphanumeric = (str: string): string => {
+  return str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+};
+
 const rules: PalindromeRule[] = [
   new EmptyStringRule(),
   new SingleCharacterRule(),
@@ -30,5 +34,5 @@ const rules: PalindromeRule[] = [
 ];
 
 export function isPalindrome(str: string): boolean {
-  return rules.some((rule) => rule.isValid(str));
+  return rules.some((rule) => rule.isValid(removeNonAlphanumeric(str)));
 }
