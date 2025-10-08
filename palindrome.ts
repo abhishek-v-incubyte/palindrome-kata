@@ -53,5 +53,6 @@ const rules: PalindromeRule[] = [
 ];
 
 export function isPalindrome(str: string): boolean {
+  //new changes
   return rules.some((rule) => rule.isValid(str));
 }
